@@ -1,0 +1,22 @@
+@model IEnumerable<CrudRafa.Models.Funcionario>
+
+    <h2>Estatisticas de funcionarios</h2>
+    <a href="/Funcionarios/Cadastrar" class= "btn btn-success">Novo funcionario</a>
+<hr>
+    @foreach (var funcionario in Model)
+    {
+        <p>Nome do funcionario: @funcionario.Nome</p>
+        <p>Peças feitas: @funcionario.Pecas</p>
+        <p>Horário de entrada e saida: @funcionario.Horario</p>
+          
+          if(funcionario.Pecas >= 10){
+                funcionario.Pecas = funcionario.Pecas;
+                <h2>O funcionario ganhou um aumento <img width="300" src="http://2.bp.blogspot.com/-CoWZstKArjQ/T9LIuZSe9MI/AAAAAAAACTc/Wb6QHtDjJ4M/s320/309_comemora_o.jpg"/></h2>
+            }else{
+              <h2>O funcionario foi demitido <img width="300" src="http://o.aolcdn.com/images/dims?quality=80&thumbnail=1200%2C630&image_uri=http%3A%2F%2Fi.huffpost.com%2Fgen%2F3042026%2Fimages%2Fn-KIND-VERWEICHLICHT-628x314.jpg&client=cbc79c14efcebee57402&signature=4de415fcf9b1762ba65a938465ecc9f692454489"/></h2>
+               
+            }
+        <a href="/Funcionarios/Editar/@funcionario.Id" class="btn btn-success">Editar</a>
+         <a href="/Funcionarios/Deletar/@funcionario.Id" class="btn btn-danger">Deletar</a>
+        <hr>
+    }

@@ -1,0 +1,15 @@
+@model CrudRafa.Models.Funcionario
+<h2>Cadastro de funcionário</h2>
+<html>
+<form class="form-horizontal" asp-controller="Funcionarios" asp-action="Salvar" method="POST" >
+    <input type="hidden" asp-for="Id">
+    <input type="text" class="form-control" asp-for="Nome" placeholder="Nome">
+    <input type="number" class="form-control" asp-for="Pecas" placeholder="peças">
+    <input type="text" class="form-control" asp-for="Horario" placeholder="Horario">
+    <button class="btn btn-success">Cadastrar</button>
+        </form>
+        <body>
+            <img src="http://lh5.ggpht.com/_1WNQoDzAz6k/TEzcJgo29rI/AAAAAAAABJQ/a9E4cIST8xw/s400/%2CFeitoPorMilenaBalliano%2C.png"/>
+            <img src="https://images1.boardingschoolreview.com/article/462x462/0/41/Schools-for-Students-with-Learning-Disabilities-rnE6Pe.jpg"/>
+        </body>
+</html>
